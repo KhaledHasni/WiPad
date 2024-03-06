@@ -1,0 +1,173 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe" $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe" $flags
+
+rule MAKEBROWSE
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe" $flags
+
+rule PDBLINK
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe" $flags
+
+
+
+#Build steps
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\croutine.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Workspace\WiPad\Kernel\FreeRTOS\source\croutine.c -xcl_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\croutine.xcl -macro_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\croutine.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Workspace\WiPad\Kernel\FreeRTOS\source\croutine.c -D NRF52832_XXAA -D __ARM_ARCH_7M__ -o C$:\Workspace\WiPad\Project\Debug\Obj\Kernel\FreeRTOS --debug --endian=little --cpu=ARM7TDMI -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Workspace\WiPad\Project\..\Kernel\FreeRTOS\source\include\ -I C$:\Workspace\WiPad\Project\..\Configuration\ -I C$:\Workspace\WiPad\Project\..\Middleware\Libraries\util\ -I C$:\Workspace\WiPad\Project\Toolchain\ -I C$:\Workspace\WiPad\Project\..\Board_Support\MCU\ --cpu_mode thumb -Ohz --predef_macros C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\croutine.tmp
+  rspfile_name = C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\croutine.xcl.rsp
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\event_groups.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Workspace\WiPad\Kernel\FreeRTOS\source\event_groups.c -xcl_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\event_groups.xcl -macro_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\event_groups.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Workspace\WiPad\Kernel\FreeRTOS\source\event_groups.c -D NRF52832_XXAA -D __ARM_ARCH_7M__ -o C$:\Workspace\WiPad\Project\Debug\Obj\Kernel\FreeRTOS --debug --endian=little --cpu=ARM7TDMI -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Workspace\WiPad\Project\..\Kernel\FreeRTOS\source\include\ -I C$:\Workspace\WiPad\Project\..\Configuration\ -I C$:\Workspace\WiPad\Project\..\Middleware\Libraries\util\ -I C$:\Workspace\WiPad\Project\Toolchain\ -I C$:\Workspace\WiPad\Project\..\Board_Support\MCU\ --cpu_mode thumb -Ohz --predef_macros C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\event_groups.tmp
+  rspfile_name = C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\event_groups.xcl.rsp
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\heap_1.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Workspace\WiPad\Kernel\FreeRTOS\source\portable\MemMang\heap_1.c -xcl_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\heap_1.xcl -macro_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\heap_1.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Workspace\WiPad\Kernel\FreeRTOS\source\portable\MemMang\heap_1.c -D NRF52832_XXAA -D __ARM_ARCH_7M__ -o C$:\Workspace\WiPad\Project\Debug\Obj\Kernel\FreeRTOS --debug --endian=little --cpu=ARM7TDMI -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Workspace\WiPad\Project\..\Kernel\FreeRTOS\source\include\ -I C$:\Workspace\WiPad\Project\..\Configuration\ -I C$:\Workspace\WiPad\Project\..\Middleware\Libraries\util\ -I C$:\Workspace\WiPad\Project\Toolchain\ -I C$:\Workspace\WiPad\Project\..\Board_Support\MCU\ --cpu_mode thumb -Ohz --predef_macros C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\heap_1.tmp
+  rspfile_name = C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\heap_1.xcl.rsp
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\list.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Workspace\WiPad\Kernel\FreeRTOS\source\list.c -xcl_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\list.xcl -macro_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\list.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Workspace\WiPad\Kernel\FreeRTOS\source\list.c -D NRF52832_XXAA -D __ARM_ARCH_7M__ -o C$:\Workspace\WiPad\Project\Debug\Obj\Kernel\FreeRTOS --debug --endian=little --cpu=ARM7TDMI -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Workspace\WiPad\Project\..\Kernel\FreeRTOS\source\include\ -I C$:\Workspace\WiPad\Project\..\Configuration\ -I C$:\Workspace\WiPad\Project\..\Middleware\Libraries\util\ -I C$:\Workspace\WiPad\Project\Toolchain\ -I C$:\Workspace\WiPad\Project\..\Board_Support\MCU\ --cpu_mode thumb -Ohz --predef_macros C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\list.tmp
+  rspfile_name = C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\list.xcl.rsp
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Workspace\WiPad\Kernel\FreeRTOS\portable\IAR\nrf52\port.c -xcl_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port.xcl -macro_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Workspace\WiPad\Kernel\FreeRTOS\portable\IAR\nrf52\port.c -D NRF52832_XXAA -D __ARM_ARCH_7M__ -o C$:\Workspace\WiPad\Project\Debug\Obj\Kernel\FreeRTOS --debug --endian=little --cpu=ARM7TDMI -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Workspace\WiPad\Project\..\Kernel\FreeRTOS\source\include\ -I C$:\Workspace\WiPad\Project\..\Configuration\ -I C$:\Workspace\WiPad\Project\..\Middleware\Libraries\util\ -I C$:\Workspace\WiPad\Project\Toolchain\ -I C$:\Workspace\WiPad\Project\..\Board_Support\MCU\ --cpu_mode thumb -Ohz --predef_macros C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port.tmp
+  rspfile_name = C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port.xcl.rsp
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Workspace\WiPad\Kernel\FreeRTOS\portable\CMSIS\nrf52\port_cmsis.c -xcl_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis.xcl -macro_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Workspace\WiPad\Kernel\FreeRTOS\portable\CMSIS\nrf52\port_cmsis.c -D NRF52832_XXAA -D __ARM_ARCH_7M__ -o C$:\Workspace\WiPad\Project\Debug\Obj\Kernel\FreeRTOS --debug --endian=little --cpu=ARM7TDMI -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Workspace\WiPad\Project\..\Kernel\FreeRTOS\source\include\ -I C$:\Workspace\WiPad\Project\..\Configuration\ -I C$:\Workspace\WiPad\Project\..\Middleware\Libraries\util\ -I C$:\Workspace\WiPad\Project\Toolchain\ -I C$:\Workspace\WiPad\Project\..\Board_Support\MCU\ --cpu_mode thumb -Ohz --predef_macros C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis.tmp
+  rspfile_name = C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis.xcl.rsp
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis_systick.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Workspace\WiPad\Kernel\FreeRTOS\portable\CMSIS\nrf52\port_cmsis_systick.c -xcl_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis_systick.xcl -macro_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis_systick.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Workspace\WiPad\Kernel\FreeRTOS\portable\CMSIS\nrf52\port_cmsis_systick.c -D NRF52832_XXAA -D __ARM_ARCH_7M__ -o C$:\Workspace\WiPad\Project\Debug\Obj\Kernel\FreeRTOS --debug --endian=little --cpu=ARM7TDMI -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Workspace\WiPad\Project\..\Kernel\FreeRTOS\source\include\ -I C$:\Workspace\WiPad\Project\..\Configuration\ -I C$:\Workspace\WiPad\Project\..\Middleware\Libraries\util\ -I C$:\Workspace\WiPad\Project\Toolchain\ -I C$:\Workspace\WiPad\Project\..\Board_Support\MCU\ --cpu_mode thumb -Ohz --predef_macros C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis_systick.tmp
+  rspfile_name = C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis_systick.xcl.rsp
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\queue.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Workspace\WiPad\Kernel\FreeRTOS\source\queue.c -xcl_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\queue.xcl -macro_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\queue.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Workspace\WiPad\Kernel\FreeRTOS\source\queue.c -D NRF52832_XXAA -D __ARM_ARCH_7M__ -o C$:\Workspace\WiPad\Project\Debug\Obj\Kernel\FreeRTOS --debug --endian=little --cpu=ARM7TDMI -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Workspace\WiPad\Project\..\Kernel\FreeRTOS\source\include\ -I C$:\Workspace\WiPad\Project\..\Configuration\ -I C$:\Workspace\WiPad\Project\..\Middleware\Libraries\util\ -I C$:\Workspace\WiPad\Project\Toolchain\ -I C$:\Workspace\WiPad\Project\..\Board_Support\MCU\ --cpu_mode thumb -Ohz --predef_macros C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\queue.tmp
+  rspfile_name = C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\queue.xcl.rsp
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\stream_buffer.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Workspace\WiPad\Kernel\FreeRTOS\source\stream_buffer.c -xcl_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\stream_buffer.xcl -macro_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\stream_buffer.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Workspace\WiPad\Kernel\FreeRTOS\source\stream_buffer.c -D NRF52832_XXAA -D __ARM_ARCH_7M__ -o C$:\Workspace\WiPad\Project\Debug\Obj\Kernel\FreeRTOS --debug --endian=little --cpu=ARM7TDMI -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Workspace\WiPad\Project\..\Kernel\FreeRTOS\source\include\ -I C$:\Workspace\WiPad\Project\..\Configuration\ -I C$:\Workspace\WiPad\Project\..\Middleware\Libraries\util\ -I C$:\Workspace\WiPad\Project\Toolchain\ -I C$:\Workspace\WiPad\Project\..\Board_Support\MCU\ --cpu_mode thumb -Ohz --predef_macros C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\stream_buffer.tmp
+  rspfile_name = C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\stream_buffer.xcl.rsp
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\tasks.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Workspace\WiPad\Kernel\FreeRTOS\source\tasks.c -xcl_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\tasks.xcl -macro_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\tasks.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Workspace\WiPad\Kernel\FreeRTOS\source\tasks.c -D NRF52832_XXAA -D __ARM_ARCH_7M__ -o C$:\Workspace\WiPad\Project\Debug\Obj\Kernel\FreeRTOS --debug --endian=little --cpu=ARM7TDMI -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Workspace\WiPad\Project\..\Kernel\FreeRTOS\source\include\ -I C$:\Workspace\WiPad\Project\..\Configuration\ -I C$:\Workspace\WiPad\Project\..\Middleware\Libraries\util\ -I C$:\Workspace\WiPad\Project\Toolchain\ -I C$:\Workspace\WiPad\Project\..\Board_Support\MCU\ --cpu_mode thumb -Ohz --predef_macros C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\tasks.tmp
+  rspfile_name = C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\tasks.xcl.rsp
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\timers.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Workspace\WiPad\Kernel\FreeRTOS\source\timers.c -xcl_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\timers.xcl -macro_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\timers.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Workspace\WiPad\Kernel\FreeRTOS\source\timers.c -D NRF52832_XXAA -D __ARM_ARCH_7M__ -o C$:\Workspace\WiPad\Project\Debug\Obj\Kernel\FreeRTOS --debug --endian=little --cpu=ARM7TDMI -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Workspace\WiPad\Project\..\Kernel\FreeRTOS\source\include\ -I C$:\Workspace\WiPad\Project\..\Configuration\ -I C$:\Workspace\WiPad\Project\..\Middleware\Libraries\util\ -I C$:\Workspace\WiPad\Project\Toolchain\ -I C$:\Workspace\WiPad\Project\..\Board_Support\MCU\ --cpu_mode thumb -Ohz --predef_macros C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\timers.tmp
+  rspfile_name = C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\timers.xcl.rsp
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Workspace\WiPad\Startup\main.c -xcl_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\main.xcl -macro_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\main.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Workspace\WiPad\Startup\main.c -D NRF52832_XXAA -D __ARM_ARCH_7M__ -o C$:\Workspace\WiPad\Project\Debug\Obj\Startup --debug --endian=little --cpu=ARM7TDMI -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Workspace\WiPad\Project\..\Kernel\FreeRTOS\source\include\ -I C$:\Workspace\WiPad\Project\..\Configuration\ -I C$:\Workspace\WiPad\Project\..\Middleware\Libraries\util\ -I C$:\Workspace\WiPad\Project\Toolchain\ -I C$:\Workspace\WiPad\Project\..\Board_Support\MCU\ --cpu_mode thumb -Ohz --predef_macros C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\main.tmp
+  rspfile_name = C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\main.xcl.rsp
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\system_nrf52.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Workspace\WiPad\Startup\system_nrf52.c -xcl_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\system_nrf52.xcl -macro_file C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\system_nrf52.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Workspace\WiPad\Startup\system_nrf52.c -D NRF52832_XXAA -D __ARM_ARCH_7M__ -o C$:\Workspace\WiPad\Project\Debug\Obj\Startup --debug --endian=little --cpu=ARM7TDMI -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Workspace\WiPad\Project\..\Kernel\FreeRTOS\source\include\ -I C$:\Workspace\WiPad\Project\..\Configuration\ -I C$:\Workspace\WiPad\Project\..\Middleware\Libraries\util\ -I C$:\Workspace\WiPad\Project\Toolchain\ -I C$:\Workspace\WiPad\Project\..\Board_Support\MCU\ --cpu_mode thumb -Ohz --predef_macros C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\system_nrf52.tmp
+  rspfile_name = C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\system_nrf52.xcl.rsp
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\croutine.pbi : INDEXER C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\croutine.xcl |  $
+C$:\Workspace\WiPad\Kernel\FreeRTOS\source\croutine.c
+  flags = -out=C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\croutine.pbi -f C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\croutine.xcl
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\event_groups.pbi : INDEXER C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\event_groups.xcl |  $
+C$:\Workspace\WiPad\Kernel\FreeRTOS\source\event_groups.c
+  flags = -out=C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\event_groups.pbi -f C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\event_groups.xcl
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\heap_1.pbi : INDEXER C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\heap_1.xcl |  $
+C$:\Workspace\WiPad\Kernel\FreeRTOS\source\portable\MemMang\heap_1.c
+  flags = -out=C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\heap_1.pbi -f C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\heap_1.xcl
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\list.pbi : INDEXER C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\list.xcl |  $
+C$:\Workspace\WiPad\Kernel\FreeRTOS\source\list.c
+  flags = -out=C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\list.pbi -f C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\list.xcl
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port.pbi : INDEXER C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port.xcl |  $
+C$:\Workspace\WiPad\Kernel\FreeRTOS\portable\IAR\nrf52\port.c
+  flags = -out=C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port.pbi -f C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port.xcl
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis.pbi : INDEXER C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis.xcl |  $
+C$:\Workspace\WiPad\Kernel\FreeRTOS\portable\CMSIS\nrf52\port_cmsis.c
+  flags = -out=C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis.pbi -f C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis.xcl
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis_systick.pbi : INDEXER C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis_systick.xcl |  $
+C$:\Workspace\WiPad\Kernel\FreeRTOS\portable\CMSIS\nrf52\port_cmsis_systick.c
+  flags = -out=C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis_systick.pbi -f C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis_systick.xcl
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\queue.pbi : INDEXER C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\queue.xcl |  $
+C$:\Workspace\WiPad\Kernel\FreeRTOS\source\queue.c
+  flags = -out=C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\queue.pbi -f C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\queue.xcl
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\stream_buffer.pbi : INDEXER C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\stream_buffer.xcl |  $
+C$:\Workspace\WiPad\Kernel\FreeRTOS\source\stream_buffer.c
+  flags = -out=C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\stream_buffer.pbi -f C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\stream_buffer.xcl
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\tasks.pbi : INDEXER C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\tasks.xcl |  $
+C$:\Workspace\WiPad\Kernel\FreeRTOS\source\tasks.c
+  flags = -out=C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\tasks.pbi -f C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\tasks.xcl
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\timers.pbi : INDEXER C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\timers.xcl |  $
+C$:\Workspace\WiPad\Kernel\FreeRTOS\source\timers.c
+  flags = -out=C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\timers.pbi -f C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\timers.xcl
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\main.pbi : INDEXER C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\main.xcl |  $
+C$:\Workspace\WiPad\Startup\main.c
+  flags = -out=C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\main.pbi -f C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\main.xcl
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\system_nrf52.pbi : INDEXER C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\system_nrf52.xcl |  $
+C$:\Workspace\WiPad\Startup\system_nrf52.c
+  flags = -out=C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\system_nrf52.pbi -f C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\system_nrf52.xcl
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad.pbw : MAKEBROWSE C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad.pbd
+  flags = C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad.pbd -output C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad.pbw
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad_part0.pbi : PDBLINK C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\croutine.pbi |  $
+C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\event_groups.pbi $
+C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\heap_1.pbi $
+C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\list.pbi
+  flags = -M C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad_part0.pbi C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\croutine.pbi C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\event_groups.pbi C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\heap_1.pbi C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\list.pbi
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad_part1.pbi : PDBLINK C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port.pbi |  $
+C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis.pbi $
+C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis_systick.pbi $
+C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\queue.pbi
+  flags = -M C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad_part1.pbi C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port.pbi C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis.pbi C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\port_cmsis_systick.pbi C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\queue.pbi
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad_part2.pbi : PDBLINK C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\stream_buffer.pbi |  $
+C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\tasks.pbi $
+C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\timers.pbi $
+C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\main.pbi
+  flags = -M C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad_part2.pbi C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\stream_buffer.pbi C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\tasks.pbi C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Kernel\FreeRTOS\timers.pbi C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\main.pbi
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad_part3.pbi : PDBLINK C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\system_nrf52.pbi
+  flags = -M C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad_part3.pbi C$:\Workspace\WiPad\Project\Debug\BrowseInfo\Startup\system_nrf52.pbi
+
+build C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad.pbd : PDBLINK C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad_part0.pbi |  $
+C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad_part1.pbi $
+C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad_part2.pbi $
+C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad_part3.pbi
+  flags = -M C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad.pbd C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad_part0.pbi C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad_part1.pbi C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad_part2.pbi C$:\Workspace\WiPad\Project\Debug\BrowseInfo\WiPad_part3.pbi
+

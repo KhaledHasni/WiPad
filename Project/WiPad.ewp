@@ -16,19 +16,19 @@
                 <debug>1</debug>
                 <option>
                     <name>ExePath</name>
-                    <state>_build</state>
+                    <state>Debug\Exe</state>
                 </option>
                 <option>
                     <name>ObjPath</name>
-                    <state>_build</state>
+                    <state>Debug\Obj</state>
                 </option>
                 <option>
                     <name>ListPath</name>
-                    <state>_build</state>
+                    <state>Debug\List</state>
                 </option>
                 <option>
                     <name>BrowseInfoPath</name>
-                    <state>nrf52832_xxaa\BrowseInfo</state>
+                    <state>Debug\BrowseInfo</state>
                 </option>
                 <option>
                     <name>GEndianMode</name>
@@ -74,7 +74,7 @@
                 </option>
                 <option>
                     <name>OGChipSelectEditMenu</name>
-                    <state>nRF52832_xxAA	NordicSemi nRF52832_xxAA</state>
+                    <state>Default	None</state>
                 </option>
                 <option>
                     <name>GenLowLevelInterface</name>
@@ -82,7 +82,7 @@
                 </option>
                 <option>
                     <name>GEndianModeBE</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>OGBufferedTerminalOutput</name>
@@ -99,7 +99,7 @@
                 <option>
                     <name>GBECoreSlave</name>
                     <version>30</version>
-                    <state>39</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>OGUseCmsis</name>
@@ -116,21 +116,21 @@
                 <option>
                     <name>CoreVariant</name>
                     <version>30</version>
-                    <state>39</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>GFPUDeviceSlave</name>
-                    <state>nRF52832_xxAA	NordicSemi nRF52832_xxAA</state>
+                    <state>Default	None</state>
                 </option>
                 <option>
                     <name>FPU2</name>
                     <version>0</version>
-                    <state>4</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>NrRegs</name>
                     <version>0</version>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>NEON</name>
@@ -139,7 +139,7 @@
                 <option>
                     <name>GFPUCoreSlave2</name>
                     <version>30</version>
-                    <state>39</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>OGCMSISPackSelectDevice</name>
@@ -180,7 +180,7 @@
                 </option>
                 <option>
                     <name>DSPExtension</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>TrustZone</name>
@@ -210,7 +210,8 @@
                 <debug>1</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state></state>
+                    <state>NRF52832_XXAA</state>
+                    <state>__ARM_ARCH_7M__</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -291,7 +292,7 @@
                 </option>
                 <option>
                     <name>IExtraOptions</name>
-                    <state>--diag_suppress Pe111 --diag_suppress Pe188</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>CCLangConformance</name>
@@ -331,7 +332,11 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state></state>
+                    <state>$PROJ_DIR$\..\Kernel\FreeRTOS\source\include</state>
+                    <state>$PROJ_DIR$\..\Configuration</state>
+                    <state>$PROJ_DIR$\..\Middleware\Libraries\util</state>
+                    <state>$PROJ_DIR$\Toolchain</state>
+                    <state>$PROJ_DIR$\..\Board_Support\MCU</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -352,7 +357,7 @@
                 <option>
                     <name>CCOptStrategy</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCOptLevelSlave</name>
@@ -409,7 +414,7 @@
                 <option>
                     <name>CCOptStrategySlave</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCGuardCalls</name>
@@ -495,7 +500,7 @@
                 </option>
                 <option>
                     <name>ADebug</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>AltRegisterNames</name>
@@ -651,7 +656,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>64</hasPrio>
+                <hasPrio>1</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
@@ -744,7 +749,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$TOOLKIT_DIR$\config\linker\NordicSemi\nrf52832_xxaa.icf</state>
+                    <state>$PROJ_DIR$\WiPad.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -1048,14 +1053,14 @@
         <toolchain>
             <name>ARM</name>
         </toolchain>
-        <debug>0</debug>
+        <debug>1</debug>
         <settings>
             <name>General</name>
             <archiveVersion>3</archiveVersion>
             <data>
                 <version>33</version>
                 <wantNonLocal>1</wantNonLocal>
-                <debug>0</debug>
+                <debug>1</debug>
                 <option>
                     <name>ExePath</name>
                     <state>Release\Exe</state>
@@ -1249,7 +1254,7 @@
             <data>
                 <version>37</version>
                 <wantNonLocal>1</wantNonLocal>
-                <debug>0</debug>
+                <debug>1</debug>
                 <option>
                     <name>CCDefines</name>
                     <state>NDEBUG</state>
@@ -1317,7 +1322,7 @@
                 </option>
                 <option>
                     <name>CCDebugInfo</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IEndianMode</name>
@@ -1497,7 +1502,7 @@
             <data>
                 <version>11</version>
                 <wantNonLocal>1</wantNonLocal>
-                <debug>0</debug>
+                <debug>1</debug>
                 <option>
                     <name>AObjPrefix</name>
                     <state>1</state>
@@ -1537,7 +1542,7 @@
                 </option>
                 <option>
                     <name>ADebug</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>AltRegisterNames</name>
@@ -1663,7 +1668,7 @@
             <data>
                 <version>1</version>
                 <wantNonLocal>1</wantNonLocal>
-                <debug>0</debug>
+                <debug>1</debug>
                 <option>
                     <name>OOCOutputFormat</name>
                     <version>3</version>
@@ -1711,7 +1716,7 @@
             <data>
                 <version>25</version>
                 <wantNonLocal>1</wantNonLocal>
-                <debug>0</debug>
+                <debug>1</debug>
                 <option>
                     <name>IlinkLibIOConfig</name>
                     <state>1</state>
@@ -2069,7 +2074,7 @@
             <data>
                 <version>0</version>
                 <wantNonLocal>1</wantNonLocal>
-                <debug>0</debug>
+                <debug>1</debug>
                 <option>
                     <name>IarchiveInputs</name>
                     <state></state>
@@ -2104,6 +2109,39 @@
         <name>Kernel</name>
         <group>
             <name>FreeRTOS</name>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\croutine.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\event_groups.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\portable\MemMang\heap_1.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\list.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\IAR\nrf52\port.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\CMSIS\nrf52\port_cmsis.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\CMSIS\nrf52\port_cmsis_systick.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\queue.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\stream_buffer.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\tasks.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\timers.c</name>
+            </file>
         </group>
     </group>
     <group>
@@ -2123,5 +2161,14 @@
     </group>
     <group>
         <name>Startup</name>
+        <file>
+            <name>$PROJ_DIR$\..\Startup\iar_startup_nrf52.s</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Startup\main.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Startup\system_nrf52.c</name>
+        </file>
     </group>
 </project>

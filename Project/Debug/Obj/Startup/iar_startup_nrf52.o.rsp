@@ -1,0 +1,1 @@
+﻿C:\Workspace\WiPad\Startup\iar_startup_nrf52.s -OC:\Workspace\WiPad\Project\Debug\Obj\Startup -s+ -M<> -w+ -r --cpu ARM7TDMI --fpu None

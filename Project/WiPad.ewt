@@ -1351,7 +1351,7 @@
                 <debug>1</debug>
                 <option>
                     <name>GenRtcDebugHeap</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GenRtcEnableBoundsChecking</name>
@@ -1425,7 +1425,7 @@
         <toolchain>
             <name>ARM</name>
         </toolchain>
-        <debug>0</debug>
+        <debug>1</debug>
         <settings>
             <name>C-STAT</name>
             <archiveVersion>515</archiveVersion>
@@ -2767,10 +2767,10 @@
             <data>
                 <version>2</version>
                 <wantNonLocal>1</wantNonLocal>
-                <debug>0</debug>
+                <debug>1</debug>
                 <option>
                     <name>GenRtcDebugHeap</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GenRtcEnableBoundsChecking</name>
@@ -2858,6 +2858,39 @@
         <name>Kernel</name>
         <group>
             <name>FreeRTOS</name>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\croutine.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\event_groups.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\portable\MemMang\heap_1.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\list.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\IAR\nrf52\port.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\CMSIS\nrf52\port_cmsis.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\CMSIS\nrf52\port_cmsis_systick.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\queue.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\stream_buffer.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\tasks.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\timers.c</name>
+            </file>
         </group>
     </group>
     <group>
@@ -2877,5 +2910,14 @@
     </group>
     <group>
         <name>Startup</name>
+        <file>
+            <name>$PROJ_DIR$\..\Startup\iar_startup_nrf52.s</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Startup\main.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Startup\system_nrf52.c</name>
+        </file>
     </group>
 </project>

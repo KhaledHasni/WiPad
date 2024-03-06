@@ -40,11 +40,11 @@
                 </option>
                 <option>
                     <name>MemOverride</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>MemFile</name>
-                    <state>$TOOLKIT_DIR$\CONFIG\debugger\NordicSemi\nRF52832_xxAA.ddf</state>
+                    <state>$PROJ_DIR$\nRF52832_xxAA.ddf</state>
                 </option>
                 <option>
                     <name>RunToEnable</name>
@@ -60,7 +60,7 @@
                 </option>
                 <option>
                     <name>CExtraOptions</name>
-                    <state></state>
+                    <state>--drv_vector_table_base=0x0</state>
                 </option>
                 <option>
                     <name>CFpuProcessor</name>

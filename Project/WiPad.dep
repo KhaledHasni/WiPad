@@ -1,54 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>5</fileVersion>
-    <fileChecksum>883080575</fileChecksum>
+    <fileChecksum>3981170949</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\..\Startup\system_nrf52.c</file>
             <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
-            <file>$PROJ_DIR$\_build\Startup\iar_startup_nrf52.o.rsp</file>
             <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
             <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
             <file>$PROJ_DIR$\..\Startup\iar_startup_nrf52.s</file>
-            <file>$PROJ_DIR$\..\Startup\system_nrf52.c</file>
-            <file>$PROJ_DIR$\_build\Startup\system_nrf52.o</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\peer_manager_handler.c</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\security_manager.c</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\pm_buffer.c</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\security_dispatcher.c</file>
+            <file>$PROJ_DIR$\..\Application\main.c</file>
             <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
             <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
             <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
             <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-            <file>$PROJ_DIR$\_build\Application\main.o</file>
-            <file>$PROJ_DIR$\_build\Startup\iar_startup_nrf52.o</file>
-            <file>$PROJ_DIR$\_build\WiPad.hex</file>
-            <file>$PROJ_DIR$\_build\WiPad.out</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\ble_advdata.c</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\ble_conn_params.c</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\ble_srv_common.c</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\gatts_cache_manager.c</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\nrf_ble_qwr.c</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\peer_manager.c</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\id_manager.c</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\peer_data_storage.c</file>
-            <file>$PROJ_DIR$\..\Application\main.c</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\peer_database.c</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\ble_advertising.c</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\gatt_cache_manager.c</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\auth_status_tracker.c</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\nrf_ble_gatt.c</file>
-            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\peer_id.c</file>
+            <file>$PROJ_DIR$\..\Middleware\Libraries\util\app_util_platform.h</file>
+            <file>$PROJ_DIR$\Toolchain\compiler_abstraction.h</file>
+            <file>$PROJ_DIR$\..\Kernel\FreeRTOS\source\timers.c</file>
+            <file>$PROJ_DIR$\..\Kernel\FreeRTOS\source\event_groups.c</file>
+            <file>$PROJ_DIR$\..\Kernel\FreeRTOS\source\stream_buffer.c</file>
+            <file>$PROJ_DIR$\..\Kernel\FreeRTOS\source\croutine.c</file>
+            <file>$PROJ_DIR$\..\Kernel\FreeRTOS\source\queue.c</file>
+            <file>$PROJ_DIR$\..\Kernel\FreeRTOS\source\tasks.c</file>
+            <file>$PROJ_DIR$\..\Kernel\FreeRTOS\source\list.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\Startup\iar_startup_nrf52.o.rsp</file>
+            <file>$PROJ_DIR$\Debug\Exe\WiPad.hex</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Startup\iar_startup_nrf52.o</file>
+            <file>$PROJ_DIR$\Debug\Exe\WiPad.out</file>
+            <file>$PROJ_DIR$\..\Startup\main.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\Startup\system_nrf52.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Startup\main.o</file>
+            <file>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\IAR\nrf52\port.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\Kernel\FreeRTOS\queue.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Kernel\FreeRTOS\stream_buffer.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Kernel\FreeRTOS\port.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Kernel\FreeRTOS\tasks.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Kernel\FreeRTOS\list.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Kernel\FreeRTOS\croutine.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Kernel\FreeRTOS\port_cmsis.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Kernel\FreeRTOS\timers.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Kernel\FreeRTOS\event_groups.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Kernel\FreeRTOS\heap_1.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Kernel\FreeRTOS\port_cmsis_systick.o</file>
+            <file>$PROJ_DIR$\..\Kernel\FreeRTOS\source\portable\MemMang\heap_1.c</file>
+            <file>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\CMSIS\nrf52\port_cmsis.c</file>
+            <file>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\CMSIS\nrf52\port_cmsis_systick.c</file>
+            <file>$PROJ_DIR$\..\Board_Support\MCU\cmsis_compiler.h</file>
+            <file>$PROJ_DIR$\..\Board_Support\MCU\cmsis_iccarm.h</file>
+            <file>$PROJ_DIR$\..\Board_Support\MCU\core_cm4.h</file>
+            <file>$PROJ_DIR$\..\Board_Support\MCU\cmsis_version.h</file>
+            <file>$PROJ_DIR$\..\Board_Support\MCU\nrf.h</file>
+            <file>$PROJ_DIR$\..\Board_Support\MCU\nrf52.h</file>
+            <file>$PROJ_DIR$\..\Configuration\FreeRTOSConfig.h</file>
+            <file>$PROJ_DIR$\..\Kernel\FreeRTOS\source\include\FreeRTOS.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\aarch32\iccarm_builtin.h</file>
         </outputs>
+        <file>
+            <name>$PROJ_DIR$\..\Startup\system_nrf52.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 29</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 3 11 55 1 12 10 7 46 47 49 48 50 51</file>
+                </tool>
+            </inputs>
+        </file>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 21</file>
+                    <file> 27</file>
                 </tool>
             </outputs>
         </file>
@@ -57,55 +91,260 @@
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 19</file>
+                    <file> 26</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 2</file>
+                    <file> 22</file>
                 </tool>
             </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Startup\system_nrf52.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 8</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 3 5 0 1 17 4 15</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\_build\WiPad.out</name>
-            <outputs>
-                <tool>
-                    <name>OBJCOPY</name>
-                    <file> 20</file>
-                </tool>
-            </outputs>
         </file>
         <file>
             <name>$PROJ_DIR$\..\Application\main.c</name>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 3 11 8 12 9 10 6 7</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\timers.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 18</file>
+                    <file> 39</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 3 5 0 16 17 14 4 13 15</file>
+                    <file> 2 3 11 25 55 54 12 24 10 6 7 46 47 49 48 50 51 52 53 13 14</file>
                 </tool>
             </inputs>
         </file>
+        <file>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\event_groups.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 40</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 3 11 25 55 54 12 24 10 6 7 46 47 49 48 50 51 52 53 13 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\stream_buffer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 33</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 3 11 8 55 54 12 9 10 6 7 46 47 49 48 50 51 52 53 13 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\croutine.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 37</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 3 11 55 54 12 10 6 7 46 47 49 48 50 51 52 53 13 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\queue.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 32</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 3 11 25 8 55 54 12 24 9 10 6 7 46 47 49 48 50 51 52 53 13 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\tasks.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 35</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 3 11 25 8 55 54 12 24 9 10 6 7 46 47 49 48 50 51 52 53 13 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\list.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 36</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 3 11 25 55 54 12 24 10 6 7 46 47 49 48 50 51 52 53 13 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\WiPad.out</name>
+            <outputs>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 23</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Startup\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\IAR\nrf52\port.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 34</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 3 11 55 54 12 10 6 7 46 47 49 48 50 51 52 53 13 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\portable\MemMang\heap_1.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 41</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 3 11 25 55 54 12 24 10 6 7 46 47 49 48 50 51 52 53 13 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\CMSIS\nrf52\port_cmsis.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 38</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 3 11 55 54 12 10 6 7 46 47 49 48 50 51 52 53 13 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\CMSIS\nrf52\port_cmsis_systick.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 42</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 3 11 55 54 12 10 6 7 46 47 49 48 50 51 52 53 13 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\Startup\system_nrf52.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\timers.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\event_groups.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\stream_buffer.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\croutine.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\queue.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\tasks.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\list.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\Startup\main.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\IAR\nrf52\port.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\source\portable\MemMang\heap_1.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\CMSIS\nrf52\port_cmsis.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\CMSIS\nrf52\port_cmsis_systick.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>
             <tool>ILINK</tool>
@@ -120,6 +359,9 @@
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>
             <tool>ILINK</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
         </forcedrebuild>
     </configuration>
 </project>
