@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>5</fileVersion>
+    <fileChecksum>883080575</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$PROJ_DIR$\_build\Startup\iar_startup_nrf52.o.rsp</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\..\Startup\iar_startup_nrf52.s</file>
+            <file>$PROJ_DIR$\..\Startup\system_nrf52.c</file>
+            <file>$PROJ_DIR$\_build\Startup\system_nrf52.o</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\peer_manager_handler.c</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\security_manager.c</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\pm_buffer.c</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\security_dispatcher.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\_build\Application\main.o</file>
+            <file>$PROJ_DIR$\_build\Startup\iar_startup_nrf52.o</file>
+            <file>$PROJ_DIR$\_build\WiPad.hex</file>
+            <file>$PROJ_DIR$\_build\WiPad.out</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\ble_advdata.c</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\ble_conn_params.c</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\ble_srv_common.c</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\gatts_cache_manager.c</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\nrf_ble_qwr.c</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\peer_manager.c</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\id_manager.c</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\peer_data_storage.c</file>
+            <file>$PROJ_DIR$\..\Application\main.c</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\peer_database.c</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\ble_advertising.c</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\gatt_cache_manager.c</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\auth_status_tracker.c</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\nrf_ble_gatt.c</file>
+            <file>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\peer_id.c</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 21</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Startup\iar_startup_nrf52.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 19</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 2</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Startup\system_nrf52.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 8</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 3 5 0 1 17 4 15</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\_build\WiPad.out</name>
+            <outputs>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 20</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Application\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 18</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 3 5 0 16 17 14 4 13 15</file>
+                </tool>
+            </inputs>
+        </file>
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
+        </forcedrebuild>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>
