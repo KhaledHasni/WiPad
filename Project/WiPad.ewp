@@ -74,7 +74,7 @@
                 </option>
                 <option>
                     <name>OGChipSelectEditMenu</name>
-                    <state>Default	None</state>
+                    <state>nRF52832_xxAA	NordicSemi nRF52832_xxAA</state>
                 </option>
                 <option>
                     <name>GenLowLevelInterface</name>
@@ -82,7 +82,7 @@
                 </option>
                 <option>
                     <name>GEndianModeBE</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>OGBufferedTerminalOutput</name>
@@ -99,7 +99,7 @@
                 <option>
                     <name>GBECoreSlave</name>
                     <version>30</version>
-                    <state>0</state>
+                    <state>39</state>
                 </option>
                 <option>
                     <name>OGUseCmsis</name>
@@ -116,21 +116,21 @@
                 <option>
                     <name>CoreVariant</name>
                     <version>30</version>
-                    <state>0</state>
+                    <state>39</state>
                 </option>
                 <option>
                     <name>GFPUDeviceSlave</name>
-                    <state>Default	None</state>
+                    <state>nRF52832_xxAA	NordicSemi nRF52832_xxAA</state>
                 </option>
                 <option>
                     <name>FPU2</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>4</state>
                 </option>
                 <option>
                     <name>NrRegs</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>NEON</name>
@@ -139,7 +139,7 @@
                 <option>
                     <name>GFPUCoreSlave2</name>
                     <version>30</version>
-                    <state>0</state>
+                    <state>39</state>
                 </option>
                 <option>
                     <name>OGCMSISPackSelectDevice</name>
@@ -180,7 +180,7 @@
                 </option>
                 <option>
                     <name>DSPExtension</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>TrustZone</name>
@@ -210,8 +210,8 @@
                 <debug>1</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>NRF52832_XXAA</state>
-                    <state>__ARM_ARCH_7M__</state>
+                    <state>NRF52832_XXAA
+</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -337,6 +337,17 @@
                     <state>$PROJ_DIR$\..\Middleware\Libraries\util</state>
                     <state>$PROJ_DIR$\Toolchain</state>
                     <state>$PROJ_DIR$\..\Board_Support\MCU</state>
+                    <state>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice</state>
+                    <state>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\IAR\nrf52</state>
+                    <state>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\CMSIS\nrf52</state>
+                    <state>$PROJ_DIR$\..\Board_Support\MCU\hal</state>
+                    <state>$PROJ_DIR$\..\Board_Support\MCU\legacy</state>
+                    <state>$PROJ_DIR$\..\Board_Support\MCU\clock</state>
+                    <state>$PROJ_DIR$\..\Board_Support\MCU\power</state>
+                    <state>$PROJ_DIR$\..\Middleware\Libraries\log</state>
+                    <state>$PROJ_DIR$\..\Middleware\Libraries\experimental_section_vars</state>
+                    <state>$PROJ_DIR$\..\Middleware\Libraries\strerror</state>
+                    <state>$PROJ_DIR$\..\Middleware\Libraries\log\src</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -500,7 +511,7 @@
                 </option>
                 <option>
                     <name>ADebug</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>AltRegisterNames</name>
@@ -656,7 +667,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>1</hasPrio>
+                <hasPrio>192</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
@@ -2103,6 +2114,18 @@
             <group>
                 <name>Low_Level_Abstraction</name>
             </group>
+            <group>
+                <name>MCU</name>
+                <group>
+                    <name>clock</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\Board_Support\MCU\clock\nrf_drv_clock.c</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\Board_Support\MCU\clock\nrfx_clock.c</name>
+                    </file>
+                </group>
+            </group>
         </group>
     </group>
     <group>
@@ -2146,6 +2169,15 @@
     </group>
     <group>
         <name>Middleware</name>
+        <group>
+            <name>Libraries</name>
+            <group>
+                <name>util</name>
+                <file>
+                    <name>$PROJ_DIR$\..\Middleware\Libraries\util\app_util_platform.c</name>
+                </file>
+            </group>
+        </group>
         <group>
             <name>RF_Stack</name>
             <group>
