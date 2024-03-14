@@ -348,6 +348,7 @@
                     <state>$PROJ_DIR$\..\Middleware\Libraries\experimental_section_vars</state>
                     <state>$PROJ_DIR$\..\Middleware\Libraries\strerror</state>
                     <state>$PROJ_DIR$\..\Middleware\Libraries\log\src</state>
+                    <state>$PROJ_DIR$\..\Middleware\Services\BLE_Service</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -667,7 +668,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>192</hasPrio>
+                <hasPrio>1</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
@@ -2189,6 +2190,12 @@
         </group>
         <group>
             <name>Services</name>
+            <group>
+                <name>BLE_Service</name>
+            </group>
+            <file>
+                <name>$PROJ_DIR$\..\Middleware\Services\BLE_Service\BLE_Service.c</name>
+            </file>
         </group>
     </group>
     <group>
