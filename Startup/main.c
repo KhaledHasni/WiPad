@@ -5,6 +5,7 @@
 #include "timers.h"
 
 #include "BLE_Service.h"
+#include "App_LEDs.h"
 
 #define WIPAD_MOCK_EVENT (1 << 0)
 
@@ -47,6 +48,9 @@ int main(void)
 
     /* Call BLE_Service_Init */
     BLE_Service_Init();
+
+    /* Call LED_Pattern_Init */
+    vidApp_Leds_Init();
 
     /* Start Timer */
     BaseType_t lErrorCode = xTimerStart(pvTimerHandle, 0);

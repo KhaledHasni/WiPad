@@ -356,6 +356,7 @@
                     <state>$PROJ_DIR$\..\Middleware\Libraries\ringbuf</state>
                     <state>$PROJ_DIR$\..\Middleware\Libraries\atomic</state>
                     <state>$PROJ_DIR$\..\Middleware\RF_Stack\BLE_Stack\nrf_ble_gatt</state>
+                    <state>$PROJ_DIR$\..\Application\App_LEDs</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2111,6 +2112,12 @@
     </configuration>
     <group>
         <name>Application</name>
+        <group>
+            <name>App_LEDs</name>
+            <file>
+                <name>$PROJ_DIR$\..\Application\App_LEDs\App_LEDs.c</name>
+            </file>
+        </group>
     </group>
     <group>
         <name>Board_Support</name>
