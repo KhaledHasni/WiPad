@@ -6,7 +6,6 @@
 #include "nrf_gpio.h"
 #include "App_LEDs.h"
 
-
 static TimerHandle_t pvAppLedsTimerHandle;
 static TaskHandle_t pvAppLedsTaskHandle;
 static QueueHandle_t pvAppLedsQueueHandle;
@@ -22,7 +21,6 @@ static void vidLeds_Control(uint32_t u32Value1, uint32_t u32Value2, uint32_t u32
   nrf_gpio_pin_write(APP_LED_3, u32Value3);
   nrf_gpio_pin_write(APP_LED_4, u32Value4);
 }
-
 
 static void vidApp_Leds_Task_Function(void *pvParam)
 {
@@ -78,7 +76,7 @@ static void vidAppLedsTimerCallback(TimerHandle_t pvTimerHandle)
 
         case 3:
         {
-            u8ExpirationCount =0;
+            u8ExpirationCount = 0;
             /* Turn LED3 on*/
             vidLeds_Control(APP_LED_SWITCH_OFF, APP_LED_SWITCH_OFF, APP_LED_SWITCH_ON, APP_LED_SWITCH_OFF);
             /* Send queue to task */
