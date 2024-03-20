@@ -356,6 +356,8 @@
                     <state>$PROJ_DIR$\..\Middleware\Libraries\ringbuf</state>
                     <state>$PROJ_DIR$\..\Middleware\Libraries\atomic</state>
                     <state>$PROJ_DIR$\..\Middleware\RF_Stack\BLE_Stack\nrf_ble_gatt</state>
+                    <state>$PROJ_DIR$\..\Board_Support\Drivers</state>
+                    <state>$PROJ_DIR$\..\Board_Support\MCU\spi</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2121,6 +2123,15 @@
             </group>
             <group>
                 <name>Low_Level_Abstraction</name>
+                <group>
+                    <name>Spi</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\Board_Support\Drivers\Low_Level_Abstraction\Spi\Spi_al.c</name>
+                    </file>
+                </group>
+                <group>
+                    <name>Twi</name>
+                </group>
             </group>
             <group>
                 <name>MCU</name>
