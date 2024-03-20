@@ -207,7 +207,7 @@ static void vidSpiMasterEventHandler(nrf_drv_spi_evt_t const *pstrEvent, void *p
 static void vidSpiSlaveEventHandler(nrf_drv_spis_event_t strEvent)
 {
     /* Find Slave Spi instance responsible for triggering this event handler. Note: This
-       implementation supposes that non two Slave Spi transfers can be in progress simultaneously */
+       implementation supposes that no two Slave Spi transfers can be in progress simultaneously */
     uint8_t u8SpiInstance = u8FindSlaveInstance();
 
     if(u8SpiInstance < SPI_AL_MAX_SLAVE_INSTANCE_COUNT)
