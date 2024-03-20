@@ -65,7 +65,7 @@
 )
 
 /**************************************   PRIVATE TYPES   ****************************************/
-typedef void (*SpiMasterEventHandler)(nrf_drv_spi_evt_t const *pstrEvent, void *pvArg); 
+typedef void (*SpiMasterEventHandler)(nrf_drv_spi_evt_t const *pstrEvent, void *pvArg);
 
 /************************************   PRIVATE VARIABLES   **************************************/
 static SpiAl_tstrHandle strSpiMasterHandleArray[SPI_AL_MAX_MASTER_INSTANCE_COUNT] = {{0}};
@@ -123,12 +123,12 @@ static void vidMapClkMode(void *pvSpiCfg, SpiAl_tenuRole enuSpiRole, SpiAl_tenuC
             {
                 pstrMasterCfg->mode = (SpiAl_Clk_Active_High == enuClkPolarity)?NRF_DRV_SPI_MODE_1:NRF_DRV_SPI_MODE_3;
             }
-            break;    
+            break;
 
             default:
                 /* Nothing to do */
                 break;
-            }    
+            }
         }
         else
         {
@@ -146,7 +146,7 @@ static void vidMapClkMode(void *pvSpiCfg, SpiAl_tenuRole enuSpiRole, SpiAl_tenuC
             {
                 pstrSlaveCfg->mode = (SpiAl_Clk_Active_High == enuClkPolarity)?NRF_SPIS_MODE_1:NRF_SPIS_MODE_3;
             }
-            break;    
+            break;
 
             default:
                 /* Nothing to do */
@@ -241,7 +241,7 @@ static void vidSpiSlaveEventHandler(nrf_drv_spis_event_t strEvent)
                 }
             }
         }
-    }   
+    }
 }
 
 /**************************************   PUBLIC FUNCTIONS   *************************************/
@@ -255,7 +255,7 @@ Drivers_tenuStatus enuSpiAl_Init(SpiAl_tstrConfig *pstrConfig, SpiAlCallback pfC
         bool bInitializedInst = (SpiAl_Master == pstrConfig->enuSpiRole)
                                   ?strSpiMasterHandleArray[u8SpiInstance].bIsInitialized
                                   :strSpiSlaveHandleArray[u8SpiInstance].bIsInitialized;
-    
+
         if(!bInitializedInst)
         {
             /* Make sure user passed a valid configuration */
@@ -384,8 +384,8 @@ bool bSpiAl_TransferInProgress(SpiAl_tenuRole enuRole, uint8_t u8SpiInstance)
                       ?strSpiSlaveHandleArray[u8SpiInstance].bTransferInProgress
                       :false;
         }
-    }    
-    
+    }
+
     return bRetVal;
 }
 
@@ -409,7 +409,7 @@ Drivers_tenuStatus enuSpiAl_Transfer(SpiAl_tenuRole enuRole, uint8_t u8SpiInstan
                                                                  pstrXfer->pu8RxBuffer,
                                                                  pstrXfer->u8RxBufferLength))
                                                                  ?Driver_Success:Driver_Failure;
-                
+
                 /* Set ongoing transfer flag if transfer is being performed in non-blocking mode */
                 if(strSpiMasterHandleArray[u8SpiInstance].pfCallback)
                 {
@@ -432,8 +432,8 @@ Drivers_tenuStatus enuSpiAl_Transfer(SpiAl_tenuRole enuRole, uint8_t u8SpiInstan
                 /* Set ongoing transfer flag */
                 strSpiSlaveHandleArray[u8SpiInstance].bTransferInProgress = true;
             }
-        }        
+        }
     }
 
-    return enuRetVal; 
+    return enuRetVal;
 }

@@ -124,14 +124,14 @@ typedef struct
 /**
  * @brief enuSpiAl_Init Initializes an SPI instance with a user
  *        configuration and sets an application-level end-of-transfer callback.
- * 
+ *
  * @note Passing a NULL callback function pointer to enuSpiAl_Init will automatically
  *       configure SpiAl's instance to perform transfers in blocking mode. This is only
  *       applicable to Master SpiAl instances.
- * 
+ *
  * @note SpiAl instances configured as Master use nrf_drv_spi driver which does not rely on EDMA. SpiAl
  *       instances configured as Slave however, use the nrf_drv_spis driver which does make use of EDMA.
- *  
+ *
  * @pre This function requires no prerequisites.
  *
  * @warning This function should be called before calling any SpiAl API and it should be called once for
@@ -139,7 +139,7 @@ typedef struct
  *
  * @param pstrConfig Pointer to user configuration structure
  * @param pfCallback Pointer to application-level end-of-transfer callback
- * 
+ *
  * @return Drivers_tenuStatus Driver_Success if initialization was performed successfully,
  *         Driver_Failure otherwise
  */
@@ -154,8 +154,8 @@ Drivers_tenuStatus enuSpiAl_Init(SpiAl_tstrConfig *pstrConfig, SpiAlCallback pfC
  * @warning Blocking transfers cannot be aborted
  *
  * @param enuRole SpiAl instance role
- * @param u8SpiInstance SpiAl instance 
- * 
+ * @param u8SpiInstance SpiAl instance
+ *
  * @return nothing
  */
 void vidSpiAl_Uninit(SpiAl_tenuRole enuRole, uint8_t u8SpiInstance);
@@ -165,12 +165,12 @@ void vidSpiAl_Uninit(SpiAl_tenuRole enuRole, uint8_t u8SpiInstance);
  *
  * @pre The SpiAl instance identified by its role and index must have already been initialized
  *      using enuSpiAl_Init by the time this function is invoked.
- * 
- * @warning This function shouldn't be used for blocking Spi transfers 
+ *
+ * @warning This function shouldn't be used for blocking Spi transfers
  *
  * @param enuRole SpiAl instance role
  * @param u8SpiInstance SpiAl instance
- * 
+ *
  * @return bool true if transfer is ongoing, false otherwise
  */
 bool bSpiAl_TransferInProgress(SpiAl_tenuRole enuRole, uint8_t u8SpiInstance);
@@ -180,14 +180,14 @@ bool bSpiAl_TransferInProgress(SpiAl_tenuRole enuRole, uint8_t u8SpiInstance);
  *
  * @pre The SpiAl instance identified by its role and index must have already been initialized
  *      using enuSpiAl_Init by the time this function is invoked.
- * 
+ *
  * @warning Passing NULL Tx and Rx buffer pointers will yield a failed transfer. Similarly, a
- *          non NULL buffer pointer must be provided alongside a non-zero buffer length. 
+ *          non NULL buffer pointer must be provided alongside a non-zero buffer length.
  *
  * @param enuRole SpiAl instance role
  * @param u8SpiInstance SpiAl instance
  * @param pstrXfer Pointer to SpiAl transfer structure
- *  
+ *
  * @return Drivers_tenuStatus Driver_Success if SpiAl transfer was performed successfully,
  *         Driver_Failure otherwise
  */
