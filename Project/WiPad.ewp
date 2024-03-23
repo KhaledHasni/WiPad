@@ -646,7 +646,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>FreeRTOS_Test.bin</state>
+                    <state>WiPad.bin</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -693,7 +693,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>FreeRTOS_Test.out</state>
+                    <state>WiPad.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -757,7 +757,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$PROJ_DIR$\FreeRTOS_Test.icf</state>
+                    <state>$PROJ_DIR$\WiPad.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -990,7 +990,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>FreeRTOS_Test_import_lib.o</state>
+                    <state>WiPad_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
