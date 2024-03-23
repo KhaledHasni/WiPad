@@ -211,6 +211,7 @@
                 <option>
                     <name>CCDefines</name>
                     <state>NRF51</state>
+                    <state>NRF51422</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -331,19 +332,19 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\..\Board_Support\MCU</state>
                     <state>$PROJ_DIR$\Toolchain</state>
                     <state>$PROJ_DIR$\..\Kernel\FreeRTOS\source\include</state>
-                    <state>$PROJ_DIR$\..\Configuration</state>
-                    <state>$PROJ_DIR$\..\Middleware\Libraries\util</state>
-                    <state>$PROJ_DIR$\..\RF_Stack\Softdevice</state>
                     <state>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\IAR\nrf51</state>
                     <state>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\CMSIS\nrf51</state>
+                    <state>$PROJ_DIR$\..\Configuration</state>
+                    <state>$PROJ_DIR$\..\Board_Support\MCU</state>
                     <state>$PROJ_DIR$\..\Board_Support\MCU\hal</state>
                     <state>$PROJ_DIR$\..\Board_Support\MCU\clock</state>
                     <state>$PROJ_DIR$\..\Board_Support\MCU\common</state>
+                    <state>$PROJ_DIR$\..\Middleware\Libraries\util</state>
                     <state>$PROJ_DIR$\..\Middleware\Libraries\log</state>
                     <state>$PROJ_DIR$\..\Middleware\Libraries\log\src</state>
+                    <state>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2109,6 +2110,12 @@
             </group>
             <group>
                 <name>Low Level Abstraction</name>
+                <group>
+                    <name>Spi</name>
+                </group>
+                <group>
+                    <name>Twi</name>
+                </group>
             </group>
         </group>
         <group>
@@ -2117,6 +2124,12 @@
                 <name>clock</name>
                 <file>
                     <name>$PROJ_DIR$\..\Board_Support\MCU\clock\nrf_drv_clock.c</name>
+                </file>
+            </group>
+            <group>
+                <name>common</name>
+                <file>
+                    <name>$PROJ_DIR$\..\Board_Support\MCU\common\nrf_drv_common.c</name>
                 </file>
             </group>
         </group>
@@ -2171,9 +2184,12 @@
                 </file>
             </group>
         </group>
-    </group>
-    <group>
-        <name>RF_Stack</name>
+        <group>
+            <name>RF_Stack</name>
+        </group>
+        <group>
+            <name>Services</name>
+        </group>
     </group>
     <group>
         <name>Startup</name>
