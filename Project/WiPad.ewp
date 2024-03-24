@@ -346,6 +346,8 @@
                     <state>$PROJ_DIR$\..\Middleware\Libraries\log\src</state>
                     <state>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice</state>
                     <state>$PROJ_DIR$\..\Utilities\Math</state>
+                    <state>$PROJ_DIR$\..\Board_Support\Drivers</state>
+                    <state>$PROJ_DIR$\..\Application</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
