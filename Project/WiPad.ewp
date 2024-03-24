@@ -345,6 +345,7 @@
                     <state>$PROJ_DIR$\..\Middleware\Libraries\log</state>
                     <state>$PROJ_DIR$\..\Middleware\Libraries\log\src</state>
                     <state>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice</state>
+                    <state>$PROJ_DIR$\..\Utilities\Math</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2202,5 +2203,14 @@
         <file>
             <name>$PROJ_DIR$\..\Startup\system_nrf51.c</name>
         </file>
+    </group>
+    <group>
+        <name>Utilities</name>
+        <group>
+            <name>Math</name>
+            <file>
+                <name>$PROJ_DIR$\..\Utilities\Math\Math.c</name>
+            </file>
+        </group>
     </group>
 </project>
