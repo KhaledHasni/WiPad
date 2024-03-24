@@ -34,7 +34,7 @@ static void vidKeyAttTaskFunction(void *pvArg)
             __NOP();
         }
     }
-} 
+}
 
 /************************************   PUBLIC FUNCTIONS   ***************************************/
 App_tenuStatus enuAttribution_Init(void)
@@ -53,7 +53,7 @@ App_tenuStatus enuAttribution_Init(void)
         pvKeyAttEventGroupHandle = xEventGroupCreate();
         enuRetVal = (NULL != pvKeyAttEventGroupHandle)?Application_Success:Application_Failure;
     }
-    
+
     return enuRetVal;
 }
 

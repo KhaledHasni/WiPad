@@ -34,7 +34,7 @@ static void vidUseRegTaskFunction(void *pvArg)
             __NOP();
         }
     }
-} 
+}
 
 /************************************   PUBLIC FUNCTIONS   ***************************************/
 App_tenuStatus enuRegistration_Init(void)
@@ -53,7 +53,7 @@ App_tenuStatus enuRegistration_Init(void)
         pvUseRegEventGroupHandle = xEventGroupCreate();
         enuRetVal = (NULL != pvUseRegEventGroupHandle)?Application_Success:Application_Failure;
     }
-    
+
     return enuRetVal;
 }
 

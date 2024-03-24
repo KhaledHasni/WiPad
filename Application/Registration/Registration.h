@@ -19,11 +19,11 @@
 
 /************************************   PUBLIC FUNCTIONS   ***************************************/
 /**
- * @brief enuRegistration_Init Creates User registration task, event group to receive 
+ * @brief enuRegistration_Init Creates User registration task, event group to receive
  *        notifications from other tasks or events dispatched from BLE stack and registers
- *        callback to report back to Application Manager. 
+ *        callback to report back to Application Manager.
  *
- * @note This function is invoked by the Application Manager. 
+ * @note This function is invoked by the Application Manager.
  *
  * @pre This function requires no prerequisites.
  *
@@ -40,7 +40,7 @@ App_tenuStatus enuRegistration_Init(void);
  *       wants to communicate with the User registration task.
  *
  * @pre This function can't be called unless User registration task is initialized and running.
- * 
+ *
  * @param u32Event Event to be posted in local event group
  *
  * @return App_tenuStatus Application_Success if notification was posted successfully,

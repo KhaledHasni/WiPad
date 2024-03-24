@@ -10,7 +10,7 @@ static TimerHandle_t pvTimerHandle;
 
 void vApplicationIdleHook( void )
 {
-  
+
 }
 
 static void vidTimerCallback( TimerHandle_t xTimer )
@@ -34,9 +34,9 @@ int main(void)
 
     /* Test statement */
     vTaskStartScheduler();
-    
+
     while(1)
     {
-      
-    }  
+
+    }
 }

@@ -21,9 +21,9 @@
 /**
  * @brief enuAttribution_Init Creates Key attribution task, event group to receive notifications
  *        from other tasks or events dispatched from BLE stack and registers callback to
- *        report back to Application Manager. 
+ *        report back to Application Manager.
  *
- * @note This function is invoked by the Application Manager. 
+ * @note This function is invoked by the Application Manager.
  *
  * @pre This function requires no prerequisites.
  *
@@ -34,13 +34,13 @@ App_tenuStatus enuAttribution_Init(void);
 
 /**
  * @brief enuAttribution_GetNotified Notifies Key Attribution task of an incoming event by
- *        setting it in local event group. 
+ *        setting it in local event group.
  *
  * @note This function is invoked by the Application Manager signaling that another task
  *       wants to communicate with the Key Attribution task.
  *
  * @pre This function can't be called unless Key Attribution task is initialized and running.
- * 
+ *
  * @param u32Event Event to be posted in local event group
  *
  * @return App_tenuStatus Application_Success if notification was posted successfully,
