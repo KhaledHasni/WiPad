@@ -348,6 +348,8 @@
                     <state>$PROJ_DIR$\..\Utilities\Math</state>
                     <state>$PROJ_DIR$\..\Board_Support\Drivers</state>
                     <state>$PROJ_DIR$\..\Application</state>
+                    <state>$PROJ_DIR$\..\Application\Attribution</state>
+                    <state>$PROJ_DIR$\..\Application\Registration</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2103,6 +2105,18 @@
     </configuration>
     <group>
         <name>Application</name>
+        <group>
+            <name>Attribution</name>
+            <file>
+                <name>$PROJ_DIR$\..\Application\Attribution\Attribution.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Registration</name>
+            <file>
+                <name>$PROJ_DIR$\..\Application\Registration\Registration.c</name>
+            </file>
+        </group>
     </group>
     <group>
         <name>Board_Support</name>

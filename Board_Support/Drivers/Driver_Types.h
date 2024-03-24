@@ -5,6 +5,9 @@
 /*  created   -  March, 2024                                                                     */
 /* --------------------------------------------------------------------------------------------- */
 
+#ifndef DRV_TYPES_H_
+#define DRV_TYPES_H_
+
 /******************************************   TYPES   ********************************************/
 /**
  * Drivers_tenuStatus Enumeration of the different possible driver operation outcomes
@@ -14,3 +17,5 @@ typedef enum
     Driver_Success = 0, /* Operation performed successfully */
     Driver_Failure      /* Operation failed                 */
 }Drivers_tenuStatus;
+
+#endif /* DRV_TYPES_H_ */

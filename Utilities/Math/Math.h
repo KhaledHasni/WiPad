@@ -5,6 +5,9 @@
 /*  created   -  March, 2024                                                                     */
 /* --------------------------------------------------------------------------------------------- */
 
+#ifndef _UTIL_MATH_H_
+#define _UTIL_MATH_H_
+
 /******************************************   INCLUDES   *****************************************/
 #include <stdint.h>
 
@@ -30,3 +33,5 @@
  *         0xFFFFFFFF otherwise
  */
 uint32_t u32Power(uint8_t u8Base, uint8_t u8Exponent);
+
+#endif /* _UTIL_MATH_H_ */

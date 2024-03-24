@@ -3,6 +3,8 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "timers.h"
+#include "Attribution.h"
+#include "Registration.h"
 
 static TimerHandle_t pvTimerHandle;
 
@@ -18,6 +20,12 @@ static void vidTimerCallback( TimerHandle_t xTimer )
 
 int main(void)
 {
+    /* Initialize Key attribution task */
+    App_tenuStatus enuStatus = enuAttribution_Init();
+
+    /* Initialize User registration task */
+    enuStatus = enuRegistration_Init();
+
     /* Create timer */
     pvTimerHandle = xTimerCreate("Timer0", pdMS_TO_TICKS(1000), pdTRUE, NULL, vidTimerCallback);
 
