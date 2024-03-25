@@ -337,6 +337,7 @@
                     <state>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\IAR\nrf51</state>
                     <state>$PROJ_DIR$\..\Kernel\FreeRTOS\portable\CMSIS\nrf51</state>
                     <state>$PROJ_DIR$\..\Configuration</state>
+                    <state>$PROJ_DIR$\..\Board_Support\Drivers</state>
                     <state>$PROJ_DIR$\..\Board_Support\MCU</state>
                     <state>$PROJ_DIR$\..\Board_Support\MCU\hal</state>
                     <state>$PROJ_DIR$\..\Board_Support\MCU\clock</state>
@@ -345,11 +346,13 @@
                     <state>$PROJ_DIR$\..\Middleware\Libraries\log</state>
                     <state>$PROJ_DIR$\..\Middleware\Libraries\log\src</state>
                     <state>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice</state>
-                    <state>$PROJ_DIR$\..\Utilities\Math</state>
-                    <state>$PROJ_DIR$\..\Board_Support\Drivers</state>
+                    <state>$PROJ_DIR$\..\Middleware\Services</state>
+                    <state>$PROJ_DIR$\..\Middleware\Services\BLE_Service</state>
+                    <state>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\softdevice_handler</state>
                     <state>$PROJ_DIR$\..\Application</state>
                     <state>$PROJ_DIR$\..\Application\Attribution</state>
                     <state>$PROJ_DIR$\..\Application\Registration</state>
+                    <state>$PROJ_DIR$\..\Utilities\Math</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2197,15 +2200,33 @@
             <group>
                 <name>util</name>
                 <file>
+                    <name>$PROJ_DIR$\..\Middleware\Libraries\util\app_error.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Middleware\Libraries\util\app_error_weak.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Middleware\Libraries\util\app_util_platform.c</name>
                 </file>
             </group>
         </group>
         <group>
             <name>RF_Stack</name>
+            <group>
+                <name>softdevice_handler</name>
+                <file>
+                    <name>$PROJ_DIR$\..\Middleware\RF_Stack\Softdevice\softdevice_handler\softdevice_handler.c</name>
+                </file>
+            </group>
         </group>
         <group>
             <name>Services</name>
+            <group>
+                <name>BLE_Service</name>
+                <file>
+                    <name>$PROJ_DIR$\..\Middleware\Services\BLE_Service\BLE_Service.c</name>
+                </file>
+            </group>
         </group>
     </group>
     <group>
