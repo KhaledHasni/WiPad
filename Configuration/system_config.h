@@ -9,7 +9,7 @@
 #define _SYS_CONFIG_H_
 
 /************************************   APPLICATION DEFINES   ************************************/
-#define APPLICATION_COUNT 3
+#define APPLICATION_COUNT 2 /* TODO: Change this to 3 later */
 /* Key Attribution application */
 #define APP_KEYATT_TASK_STACK_SIZE 256
 #define APP_KEYATT_TASK_PRIORITY 2

@@ -2120,6 +2120,9 @@
                 <name>$PROJ_DIR$\..\Application\Registration\Registration.c</name>
             </file>
         </group>
+        <file>
+            <name>$PROJ_DIR$\..\Application\AppMgr.c</name>
+        </file>
     </group>
     <group>
         <name>Board_Support</name>

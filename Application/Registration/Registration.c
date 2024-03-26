@@ -11,6 +11,9 @@
 #include "event_groups.h"
 #include "Registration.h"
 
+/************************************   GLOBAL VARIABLES   ***************************************/
+extern App_tenuStatus AppMgr_enuDispatchEvent(uint32_t u32Event);
+
 /************************************   PRIVATE VARIABLES   **************************************/
 static TaskHandle_t pvUseRegTaskHandle;
 static EventGroupHandle_t pvUseRegEventGroupHandle;

@@ -3,9 +3,8 @@
 #include "task.h"
 #include "timers.h"
 #include "nrf_drv_clock.h"
-#include "Attribution.h"
-#include "Registration.h"
 #include "BLE_Service.h"
+#include "AppMgr.h"
 
 static TimerHandle_t pvTimerHandle;
 
@@ -26,11 +25,8 @@ int main(void)
     /* Initialize clocks and prepare them for requests */
     nrf_drv_clock_init();
 
-    /* Initialize Key attribution task */
-    enuAppStatus = enuAttribution_Init();
-
-    /* Initialize User registration task */
-    enuAppStatus = enuRegistration_Init();
+    /* Initialize application tasks */
+    enuAppStatus = AppMgr_enuInit();
 
     /* Initialize Ble stack task */
     Mid_tenuStatus enuMidStatus = enuBle_Init();

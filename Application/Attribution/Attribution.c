@@ -11,6 +11,9 @@
 #include "event_groups.h"
 #include "Attribution.h"
 
+/************************************   GLOBAL VARIABLES   ***************************************/
+extern App_tenuStatus AppMgr_enuDispatchEvent(uint32_t u32Event);
+
 /************************************   PRIVATE VARIABLES   **************************************/
 static TaskHandle_t pvKeyAttTaskHandle;
 static EventGroupHandle_t pvKeyAttEventGroupHandle;
@@ -19,6 +22,8 @@ static EventGroupHandle_t pvKeyAttEventGroupHandle;
 static void vidKeyAttTaskFunction(void *pvArg)
 {
     uint32_t u32Event;
+
+    AppMgr_enuDispatchEvent(1);
 
     /* Key attribution task's main polling loop */
     while(1)
