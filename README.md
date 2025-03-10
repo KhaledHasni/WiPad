@@ -7,7 +7,6 @@
   <a href="#overview">Overview</a> •
   <a href="#toolchain">Toolchain</a> •
   <a href="#testing-apparatus">Testing apparatus</a> •
-  <a href="#support-us">Support Us</a> •
   <a href="#description">Description</a>
 </p>
 
