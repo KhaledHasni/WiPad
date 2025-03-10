@@ -1,4 +1,16 @@
-# WiPad
+<h1 align="center"><strong>WiPad</strong></h1>
+
+<p align="center">
+  <strong>A wireless padlock providing secure, authorized access</strong>
+</p>
+
+<p align="center">
+  <a href="#overview">Overview</a> •
+  <a href="#toolchain">Toolchain</a> •
+  <a href="#testing-apparatus">Testing apparatus</a> •
+  <a href="#support-us">Support Us</a> •
+  <a href="#description">Description</a>
+</p>
 
 ## :memo: Overview
 Wireless Padlock or WiPad is an attempt at creating a smart padlock that grants access to the premises of a critical facility to authorized users exclusively.
