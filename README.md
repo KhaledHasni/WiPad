@@ -3,7 +3,6 @@
 <p align="center">
   <strong>A wireless padlock providing secure, authorized access</strong>
 </p>
-
 <p align="center">
   <a href="#overview">Overview</a> •
   <a href="#toolchain">Toolchain</a> •
