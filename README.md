@@ -1,3 +1,6 @@
+<div align="center">
+  <img src="Documents/Images/WiPad_logo.png" alt="Logo" style="width: 200px; height: auto;"/>
+</div>
 <h1 align="center"><strong>WiPad</strong></h1>
 
 <p align="center">
