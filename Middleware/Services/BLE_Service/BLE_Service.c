@@ -695,37 +695,38 @@ Mid_tenuStatus enuBle_Init(void)
                              &pvBLETaskHandle))
     {
         /* Initialize BLE stack */
-        if(Middleware_Success == enuBleStackInit())
-        {
-            /* Initialize GAP */
-            if(Middleware_Success == enuBleGapInit())
-            {
-                /* Initialize GATT */
-                if(Middleware_Success == enuBleGattInit())
-                {
-                    /* Initialize Database discovery module */
-                    if(Middleware_Success == enuBleDataBaseDiscoveryInit())
-                    {
-                        /* Initialize BLE services */
-                        if(Middleware_Success == enuBleServicesInit())
-                        {
-                            /* Initialize advertising module */
-                            if(Middleware_Success == enuAdvertisingInit())
-                            {
-                                /* Initialize Peer Manager module */
-                                if(Middleware_Success == enuBlePeerManagerInit())
-                                {
-                                    /* Initialize Connection Parameters module */
-                                    enuRetVal = enuBleConnParamsInit();
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        if(Middleware_Success != enuBleStackInit())
+            goto exit;
+
+        /* Initialize GAP */
+        if(Middleware_Success != enuBleGapInit())
+            goto exit;
+
+        /* Initialize GATT */
+        if(Middleware_Success != enuBleGattInit())
+            goto exit;
+
+        /* Initialize Database discovery module */
+        if(Middleware_Success != enuBleDataBaseDiscoveryInit())
+            goto exit;
+
+        /* Initialize BLE services */
+        if(Middleware_Success != enuBleServicesInit())
+            goto exit;
+
+        /* Initialize advertising module */
+        if(Middleware_Success != enuAdvertisingInit())
+            goto exit;
+
+        /* Initialize Peer Manager module */
+        if(Middleware_Success != enuBlePeerManagerInit())
+            goto exit;
+
+        /* Initialize Connection Parameters module */
+            enuRetVal = enuBleConnParamsInit();
     }
 
+exit:
     return enuRetVal;
 }
 
